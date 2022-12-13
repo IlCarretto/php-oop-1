@@ -5,6 +5,7 @@ require_once __DIR__ . "/Models/Genre.php";
 $yourName = new Movie("Your Name", "yourname.jpg", new Genre("Romance"), "Shinkai", 380, 1);
 $tangled = new Movie("Tangled", "tangled.jpg", new Genre("Musical"), "Disney", 592, 4);
 
+
 $movies = [
     $yourName,
     $tangled
@@ -37,7 +38,7 @@ $movies = [
                                 <?php echo $movie->getDetails() ?>
                             </p>
                             <p class="card-text">
-                                <?php echo $movie->genre ?>
+                                <?php echo $movie->genre->name ?>
                             </p>
                         </div>
                     </div>
